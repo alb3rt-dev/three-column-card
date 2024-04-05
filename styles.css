@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca';
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: var(--very-light-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 26px;
+    color: var(--very-light-gray);
+    font-size: 40px;
+    font-family: 'Big Shoulders Display';
+    text-transform: uppercase;
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-bottom: 82px;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.card {
+    width: 920px;
+    height: 500px;
+    border-radius: 6px;
+    display: flex;
+}
+
+.card .card_column {
+    width: 33.34%;
+    padding: 48px;
+}
+
+.card_column .column_svg {
+    margin-bottom: 31px
+}
+
+.card_column .learn-more-btn {
+    padding: 13px 30px;
+    border-radius: 40px;
+    border: 2px solid var(--very-light-gray);
+    font-size: 15px;
+    cursor: pointer;
+    transition: .1s ease;
+}
+
+.card_column .learn-more-btn:hover {
+    background: transparent;
+    color: var(--very-light-gray);
+}
+
+.sedans {
+    border-radius: 6px 0 0 6px;
+    background: var(--bright-orange);
+}
+
+.suvs {
+    background: var(--dark-cyan);
+}
+
+.luxury {
+    border-radius: 0 6px 6px 0;
+    background: var(--very-dark-cyan);
+}
+
+.sedans .learn-more-btn {
+    color: var(--bright-orange);
+}
+
+.suvs .learn-more-btn {
+    color: var(--dark-cyan);
+}
+
+.suvs .learn-more-btn {
+    color: var(--very-dark-cyan);
+}
+
+@media (max-width: 375px) {
+    p {
+        margin-bottom: 23px;
+    }
+
+    .card {
+        width: 327px;
+        margin: 88px auto;
+        flex-direction: column;
+    }
+
+    .card .card_column {
+        width: 100%;
+    }
+
+    .sedans {
+        border-radius: 6px 6px 0 0;
+    }
+    
+    .luxury {
+        border-radius: 0 0 6px 6px;
+    }
+}
+
+/* attribution */
+
+.attribution {
+    position: relative;
+    top: 20px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(184, 100%, 22%);
+}
+
+@media (max-width: 375px) {
+    .attribution {
+        display: none;
+    }
+}
